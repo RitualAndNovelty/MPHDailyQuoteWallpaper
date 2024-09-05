@@ -11,7 +11,6 @@ quoteFile = open(str(Path.cwd())+"\\newQuoteFile.txt", "r", encoding="utf8")
 #find the day's quote
 quoteList = quoteFile.readlines()
 todaysQuote = [s for s in quoteList if str(today.month) + "/" + str(today.day) in s]
-#print(todaysQuote[0])
 quoteFile.close()
 
 #determine background and font colors/establish typecase
@@ -45,7 +44,6 @@ while thefont.getlength(wrappedTxt[longestLineNum]) < img_fraction*image.size[0]
     fontsize += 1
     thefont = ImageFont.truetype(fontFile, fontsize)
 finalFont = ImageFont.truetype(fontFile, fontsize)
-#TEST AND REPLACE FINALFONT WITH THEFONT
 
 #create the base png
 draw = ImageDraw.Draw(image) 
